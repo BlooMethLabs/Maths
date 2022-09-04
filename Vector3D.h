@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 class Vector3D
 {
@@ -20,10 +21,53 @@ public:
     {
         return ((&x)[i]);
     }
+
+    Vector3D &operator *=(float s)
+    {
+        x *= s;
+        y *= s;
+        z *= s;
+        return (*this);
+    }
+
+    Vector3D &operator /=(float s)
+    {
+        s = 1.0F /s;
+        x *= s;
+        y *= s;
+        z *= s;
+        return (*this);
+    }
 };
 
 std::ostream &operator<<(std::ostream &os, const Vector3D v3d)
 {
     os << "[" << v3d.x << ", " << v3d.y << ", " << v3d.z << "]";
     return os;
+}
+
+inline Vector3D operator*(const Vector3D &v, float s)
+{
+    return Vector3D(v.x * s, v.y * s, v.z * s);
+}
+
+inline Vector3D operator/(const Vector3D &v, float s)
+{
+    s = 1.0F / s;
+    return Vector3D(v.x * s, v.y * s, v.z * s);
+}
+
+inline Vector3D operator-(const Vector3D &v)
+{
+    return Vector3D(-v.x, -v.y, -v.z);
+}
+
+inline float Magnitude(const Vector3D &v)
+{
+    return (sqrt(v.x * v.x + v.y * v.y + v.z * v.z));
+}
+
+inline Vector3D Normalise(const Vector3D &v)
+{
+    return v / Magnitude(v);
 }

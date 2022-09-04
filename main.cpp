@@ -16,4 +16,14 @@ int main()
 
     Vector3D v3d = Vector3D(0.3, 0.3, 0.5);
     cout << v3d << endl;
+    v3d *= 2.0;
+    cout << v3d << endl;
+    v3d /= 2.0;
+    cout << v3d << endl;
+
+    cout << Vector3D(1, 1, 1) * 2;
+    cout << Vector3D(1, 1, 1) / 2;
+    cout << -Vector3D(1, 1, 1) << endl;
+    cout << Magnitude(Vector3D(1, 1, 1)) << endl;
+    cout << Normalise(Vector3D(1, 1, 1)) << endl;
 }
