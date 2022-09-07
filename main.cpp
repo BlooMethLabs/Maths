@@ -13,6 +13,7 @@ int main()
                             2.0, 2.1, 2.2);
 
     cout << m3D << endl;
+    cout << m3D(2, 0) << endl;
     cout << m3D[0] << endl;
     cout << m3D[1] << endl;
     cout << m3D[2] << endl;
