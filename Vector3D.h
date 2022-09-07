@@ -38,6 +38,22 @@ public:
         z *= s;
         return (*this);
     }
+
+    Vector3D &operator +=(const Vector3D &v)
+    {
+        x += v.x;
+        y += v.y;
+        z += v.z;
+        return (*this);
+    }
+
+    Vector3D &operator -=(const Vector3D &v)
+    {
+        x -= v.x;
+        y -= v.y;
+        z -= v.z;
+        return (*this);
+    }
 };
 
 std::ostream &operator<<(std::ostream &os, const Vector3D v3d)
@@ -70,4 +86,14 @@ inline float Magnitude(const Vector3D &v)
 inline Vector3D Normalise(const Vector3D &v)
 {
     return v / Magnitude(v);
+}
+
+inline Vector3D operator+(const Vector3D &v1, const Vector3D &v2)
+{
+    return(Vector3D(v1.x + v2.x, v1.y + v2.y, v1.z + v2.z));
+}
+
+inline Vector3D operator-(const Vector3D &v1, const Vector3D &v2)
+{
+    return(Vector3D(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z));
 }

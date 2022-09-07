@@ -26,4 +26,13 @@ int main()
     cout << -Vector3D(1, 1, 1) << endl;
     cout << Magnitude(Vector3D(1, 1, 1)) << endl;
     cout << Normalise(Vector3D(1, 1, 1)) << endl;
+
+    cout << "[1, 1, 1] + [0.5, -0.5, 0] = ";
+    cout << Vector3D(1, 1, 1) + Vector3D(0.5, -0.5, 0) << endl;
+    cout << "[1, 1, 1] - [0.5, -0.5, 0] = ";
+    cout << Vector3D(1, 1, 1) - Vector3D(0.5, -0.5, 0) << endl;
+    cout << "[1, 1, 1] + [0.5, -0.5, 0] = ";
+    cout << (Vector3D(1, 1, 1) += Vector3D(0.5, -0.5, 0)) << endl;
+    cout << "[1, 1, 1] - [0.5, -0.5, 0] = ";
+    cout << (Vector3D(1, 1, 1) -= Vector3D(0.5, -0.5, 0)) << endl;
 }
