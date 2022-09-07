@@ -1,4 +1,6 @@
+#pragma once
 #include <iostream>
+#include "Vector3D.h"
 
 class Matrix3D
 {
@@ -25,6 +27,16 @@ public:
     {
         return (n[j][i]);
     }
+
+    Vector3D& operator[](int j)
+    {
+        return (*reinterpret_cast<Vector3D *>(n[j]));
+    }
+
+    const Vector3D& operator[](int j) const
+    {
+        return (*reinterpret_cast<const Vector3D *>(n[j]));
+    }
 };
 
 std::ostream &operator<<(std::ostream &os, const Matrix3D m3d)
@@ -34,7 +46,7 @@ std::ostream &operator<<(std::ostream &os, const Matrix3D m3d)
         os << "[ ";
         for (int j = 0; j < 3; ++j)
         {
-            os << m3d(i, j) << " ";
+            os << m3d(j, i) << " ";
         }
         os << "]" << std::endl;
     }

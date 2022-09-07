@@ -13,6 +13,9 @@ int main()
                             2.0, 2.1, 2.2);
 
     cout << m3D << endl;
+    cout << m3D[0] << endl;
+    cout << m3D[1] << endl;
+    cout << m3D[2] << endl;
 
     Vector3D v3d = Vector3D(0.3, 0.3, 0.5);
     cout << v3d << endl;
@@ -35,4 +38,9 @@ int main()
     cout << (Vector3D(1, 1, 1) += Vector3D(0.5, -0.5, 0)) << endl;
     cout << "[1, 1, 1] - [0.5, -0.5, 0] = ";
     cout << (Vector3D(1, 1, 1) -= Vector3D(0.5, -0.5, 0)) << endl;
+
+    Matrix3D m3D2 = Matrix3D(0.0, 0.1, 0.2,
+                            1.0, 1.1, 1.2,
+                            2.0, 2.1, 2.2);
+
 }
