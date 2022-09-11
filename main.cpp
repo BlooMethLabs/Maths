@@ -41,18 +41,25 @@ int main()
     cout << (Vector3D(1, 1, 1) -= Vector3D(0.5, -0.5, 0)) << endl;
 
     Matrix3D m3D2 = Matrix3D(0.0, 0.1, 0.2,
-                            1.0, 1.1, 1.2,
-                            2.0, 2.1, 2.2);
+                             1.0, 1.1, 1.2,
+                             2.0, 2.1, 2.2);
 
     Matrix3D m3D3 = Matrix3D(0.0, -0.1, -0.2,
-                            -1.0, -1.1, -1.2,
-                            -2.0, -2.1, -2.2);
+                             -1.0, -1.1, -1.2,
+                             -2.0, -2.1, -2.2);
 
     cout << (m3D2 * m3D3) << endl;
 
     cout << m3D2 * Vector3D(0.3, 0.6, 1) << endl;
 
+    cout << "Dot of same direction" << endl;
+    cout << Dot(Vector3D(1, 0, 0), Vector3D(1, 0, 0)) << endl;
+    cout << "Dot of opposite direction" << endl;
     cout << Dot(Vector3D(1, 0, 0), Vector3D(-1, 0, 0)) << endl;
+    cout << "Dot of perpindicular" << endl;
     cout << Dot(Vector3D(1, 0, 0), Vector3D(0, 1, 0)) << endl;
+    cout << "Cross of opposite" << endl;
     cout << Cross(Vector3D(1, 0, 0), Vector3D(-1, 0, 0)) << endl;
+    cout << "Cross of perpindicular x and y" << endl;
+    cout << Cross(Vector3D(1, 0, 0), Vector3D(0, 1, 0)) << endl;
 }
