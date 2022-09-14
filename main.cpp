@@ -55,11 +55,15 @@ int main()
     cout << "Dot of same direction" << endl;
     cout << Dot(Vector3D(1, 0, 0), Vector3D(1, 0, 0)) << endl;
     cout << "Dot of opposite direction" << endl;
-    cout << Dot(Vector3D(1, 0, 0), Vector3D(-1, 0, 0)) << endl;
+    cout << Dot(Vector3D(1, 0, 0), Vector3D(3, 0, 0)) << endl;
     cout << "Dot of perpindicular" << endl;
-    cout << Dot(Vector3D(1, 0, 0), Vector3D(0, 1, 0)) << endl;
+    cout << Dot(Vector3D(1, 0, 0), Vector3D(0, 3, 0)) << endl;
+    cout << "Dot of unit vectors with 15 degrees between." << endl;
+    cout << Dot(Vector3D(1, 0, 0), Vector3D(0.965925, 0.258819, 0)) << endl;
+    cout << "Dot of unit vectors with 165 degrees between." << endl;
+    cout << Dot(Vector3D(1, 0, 0), Vector3D(-0.965925, 0.258819, 0)) << endl;
     cout << "Cross of opposite" << endl;
-    cout << Cross(Vector3D(1, 0, 0), Vector3D(-1, 0, 0)) << endl;
+    cout << Cross(Vector3D(10, 0, 0), Vector3D(-10, 0, 0)) << endl;
     cout << "Cross of perpindicular x and y" << endl;
     cout << Cross(Vector3D(1, 0, 0), Vector3D(0, 1, 0)) << endl;
 }
